@@ -46,13 +46,8 @@ import java.net.URL;
 import java.util.Locale;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,LocationListener {
-
-    private GoogleMap mMap;
-    Location local;
-    LocationManager locationManager;
-    String mprovider;
     private GoogleApiClient mGoogleApiClient;
-
+    GoogleMap mMap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

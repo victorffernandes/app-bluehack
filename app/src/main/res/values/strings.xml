@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">App-bluehack</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_son">SonActivity</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Configurações</string>
+    <string name="title_activity_mom">MomActivity</string>
+    <string name="title_kids">Meus Filhos</string>
+    <string name="title_score">Pontuação</string>
 </resources>

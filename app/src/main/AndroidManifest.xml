@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <uses-feature android:name="android.hardware.location.gps" />
 
@@ -19,7 +20,6 @@
             <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="AIzaSyCIXvWzLQK5KbOW_h2fRMiWxWmCZqhMN2c" />
-
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -33,15 +33,36 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <service
+            android:name=".BlueService"
+            android:exported="false" />
+
+        <receiver android:name=".SMSReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SonActivity"
+            android:label="@string/title_activity_son" />
+        <activity
+            android:name=".MomActivity"
+            android:label="@string/title_activity_mom" />
+
+        <service
+            android:name=".BlueService"
+            android:exported="false"></service>
     </application>
 
 </manifest>
